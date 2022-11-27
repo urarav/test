@@ -1,0 +1,44 @@
+html,
+body {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+
+.box {
+  position: relative;
+}
+
+.box > .item {
+  padding: 10px;
+  gap: 10px;
+  display: flex;
+  border-radius: 4px;
+  position: absolute;
+  align-items: center;
+  word-break: break-all;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  letter-spacing: 0.5ch;
+}
+
+.box > .item > img {
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease-out;
+}
+
+.box > .item > img:hover {
+  filter: contrast(175%);
+  transform: scale(1.05);
+}

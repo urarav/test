@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Component</title>
+    <script type="module" src="./SearchBox.js"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lora:400,400i,700"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="input" />
+    <search-box class="custom-ele" disabled>
+      <!-- <img slot="left" src="./icons/aperture.svg"></img> -->
+      <!-- <img slot="right" src="./icons/check.svg"></img> -->
+    </search-box>
+  </body>
+
+  <script>
+    setTimeout(() => {
+      document.querySelector(".custom-ele").setAttribute("disabled", "22");
+    }, 2000);
+    const customEle = document.querySelector(".custom-ele");
+    customEle.addEventListener("clear", (e) => {
+      console.log("custom-event: clear");
+    });
+    customEle.addEventListener("search", (e) => {
+      console.log("custom-event: search", e.detail);
+    });
+  </script>
+</html>
