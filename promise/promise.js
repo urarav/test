@@ -53,6 +53,7 @@ class MyPromise {
       if (this.status !== PENDING) return;
       this.status = FULFILLED;
       this.value = value;
+      
       while (this.fulfillCallback.length) {
         this.fulfillCallback.shift()();
       }
